@@ -1,99 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-  </head>
-  <body class=" bg-slate-200">
-    <div class="flex justify-center mb-1 ">
-      <div class="w-3/4 bg-violet-300">
-        <div class="h-20 flex w-full justify-around items-center">
-          <div class="text-white text-lg">TO DO LIST</div>
-          <div>
-            <button class="bg-white text-violet-800 px-4 py-2 rounded" id="add-button">
-              TASK ADD
-            </button>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+
+<body class=" bg-slate-200">
+  <div class="flex justify-center mb-1 ">
+    <div class="w-3/4 bg-violet-300">
+      <div class="h-20 flex w-full justify-around items-center">
+        <div class="text-white text-lg">TO DO LIST</div>
+        <div>
+          <button class="bg-white text-violet-800 px-4 py-2 rounded" id="add-button">
+            TASK ADD
+          </button>
         </div>
       </div>
     </div>
-    
-      <div class="absolute top-4 left-1/2 transform -translate-x-1/2 bg-violet-300 p-4 rounded-lg shadow-md w-96 z-10 hidden" id="add-form">
-        <h2 class="text-xl font-bold mb-3">Add New Task</h2>
-        <form>
-          <div class="mb-3">
-            <label for="taskName" class="block text-sm font-medium text-gray-700">Task Name</label>
-            <input type="text" id="taskName" name="taskName" required class="mt-1 block w-full border-gray-300 rounded-md  focus:border-blue-500 focus:ring focus:ring-blue-200" />
-          </div>
-        </form>   
-      
-          <div class="mb-3">
-            <label for="taskDescription" class="block text-sm font-medium text-gray-700">Description</label>
-            <textarea id="taskDescription" name="taskDescription" rows="2" required class="mt-1 block w-full border-gray-300 rounded-md  focus:border-blue-500 focus:ring focus:ring-blue-200"></textarea>
-          </div>
-  
-          <div class="mb-3">
-            <label class="block text-sm font-medium text-gray-700">Priority</label>
-            <select id="priority" name="priority" class="mt-1 w-full border-gray-300 rounded-md focus:border-blue-500 focus:ring focus:ring-blue-200">
-              <option value="P1">P1</option>
-              <option value="P2">P2</option>
-              <option value="P3">P3</option>
-            </select>
-          </div>
-  
-          <div class="mb-3">
-            <label for="taskTime" class="block text-sm font-medium text-gray-700">Due Time</label>
-            <input type="time" id="taskTime" name="taskTime" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200" />
-          </div>
-  
-          <div class="mb-3">
-            <label class="block text-sm font-medium text-gray-700">Statue</label>
-            <select id="Statue" name="Statue" class="mt-1 w-full border-gray-300 rounded-md focus:border-blue-500 focus:ring focus:ring-blue-200">
-              <option value="to-do">TO-DO</option>
-              <option value="doing">DOING</option>
-              <option value="done">DONE</option>
-            </select>
-          </div>
-  
-          <button  type="submit" class="w-full bg-blue-600 text-white rounded-md py-2 hover:bg-blue-700" id="create-task">Add Task</button>
-          <button class="w-full bg-blue-600 text-white rounded-md py-2 hover:bg-blue-700" id="add-close">close</button>
-        </form>
-      </div>
-      
-      <div class="flex justify-evenly mt-24">
-        <div class="flex flex-col w-1/4">
-          <div class="bg-violet-300 p-1">
-            <div class="flex items-center">
-              <h2 class="border-r-2 p-1 font-semibold">Doing</h2>
-              <h2 class="mr-2 font-semibold p-1">0</h2>
-            </div>
-          </div>
-          <div class="bg-violet-700 h-48 overflow-y-scroll ">g</div>
-        </div>
+  </div>
 
-        <div class="flex flex-col w-1/4">
-          <div class="bg-violet-300 p-1">
-            <div class="flex items-center">
-              <h2 class="border-r-2 p-1 font-semibold">Doing</h2>
-              <h2 class="mr-2 font-semibold p-1">0</h2>
-            </div>
-          </div>
-          <div class="bg-violet-700 h-48 overflow-y-scroll">g</div>
-        </div>
-        
-        <div class="flex flex-col w-1/4">
-          <div class="bg-violet-300 p-1">
-            <div class="flex items-center">
-              <h2 class="border-r-2 p-1 font-semibold">Doing</h2>
-              <h2 class="mr-2 font-semibold p-1">0</h2>
-            </div>
-          </div>
-          <div class="bg-violet-700 h-48 overflow-y-scroll">g</div>
+  <div
+    class="absolute top-4 left-1/2 transform -translate-x-1/2 bg-violet-300 p-4 rounded-lg shadow-md w-96 z-10 hidden"
+    id="add-form">
+    <h2 class="text-xl font-bold mb-3">Add New Task</h2>
+    <form>
+      <div class="mb-3">
+        <label for="taskName" class="block text-sm font-medium text-gray-700">Task Name</label>
+        <input type="text" id="taskName" name="taskName" required
+          class="mt-1 block w-full border-gray-300 rounded-md  focus:border-blue-500 focus:ring focus:ring-blue-200" />
+      </div>
+    </form>
+
+    <div class="mb-3">
+      <label for="taskDescription" class="block text-sm font-medium text-gray-700">Description</label>
+      <textarea id="taskDescription" name="taskDescription" rows="2" required
+        class="mt-1 block w-full border-gray-300 rounded-md  focus:border-blue-500 focus:ring focus:ring-blue-200"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="block text-sm font-medium text-gray-700">Priority</label>
+      <select id="priority" name="priority"
+        class="mt-1 w-full border-gray-300 rounded-md focus:border-blue-500 focus:ring focus:ring-blue-200">
+        <option value="P1">P1</option>
+        <option value="P2">P2</option>
+        <option value="P3">P3</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="taskTime" class="block text-sm font-medium text-gray-700">Due Time</label>
+      <input type="time" id="taskTime" name="taskTime" required
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200" />
+    </div>
+
+    <div class="mb-3">
+      <label class="block text-sm font-medium text-gray-700">Statue</label>
+      <select id="Statue" name="Statue"
+        class="mt-1 w-full border-gray-300 rounded-md focus:border-blue-500 focus:ring focus:ring-blue-200">
+        <option value="To-do">TO-DO</option>
+        <option value="Doing">DOING</option>
+        <option value="Done">DONE</option>
+      </select>
+    </div>
+
+    <button type="submit" class="w-full bg-blue-600 text-white rounded-md py-2 hover:bg-blue-700" id="create-task">Add
+      Task</button>
+    <button class="w-full bg-blue-600 text-white rounded-md py-2 hover:bg-blue-700" id="add-close">close</button>
+    </form>
+  </div>
+
+  <div class="flex justify-evenly mt-24">
+    <div class="flex flex-col w-1/4">
+      <div class="bg-violet-300 p-1">
+        <div class="flex items-center">
+          <h2  class="border-r-2 p-1 font-semibold">TO-DO</h2>
+          <h2 class="mr-2 font-semibold p-1">0</h2>
         </div>
       </div>
-      
-    <script src="todo.js"></script>
-  </body>
+      <div id="To-do" class="bg-violet-700 h-48 overflow-y-scroll ">
+      </div>
+    </div>
+
+    <div class="flex flex-col w-1/4">
+      <div class="bg-violet-300 p-1">
+        <div class="flex items-center">
+          <h2 class="border-r-2 p-1 font-semibold">Doing</h2>
+          <h2 class="mr-2 font-semibold p-1">0</h2>
+        </div>
+      </div>
+      <div id="Doing" class="bg-violet-700 h-48 overflow-y-scroll"></div>
+    </div>
+
+    <div class="flex flex-col w-1/4">
+      <div class="bg-violet-300 p-1">
+        <div class="flex items-center">
+          <h2 class="border-r-2 p-1 font-semibold">done</h2>
+          <h2 class="mr-2 font-semibold p-1">0</h2>
+        </div>
+      </div>
+      <div id="Done" class="bg-violet-700 h-48 overflow-y-scroll"></div>
+    </div>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+
 </html>
